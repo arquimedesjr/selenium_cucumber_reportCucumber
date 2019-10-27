@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<extentreports>
+	<configuration>
+		<!-- Tema do relatório --> <!-- standard(Padrão), dark(Escuro) -->
+		<theme>dark</theme>
+
+		<!-- Encoding do documento -->
+		<encoding>ISO-8859-1</encoding>
+
+		<!-- Protocolo -->
+		<protocol>https</protocol>
+
+		<!-- Título do relatório -->
+		<documentTitle>Projeto POC</documentTitle>
+
+		<!-- Nome do Relatório- isso será exibido na parte superior do relatório -->
+		<reportName>POC INICIAL</reportName>
+
+		<!-- Formato da data -->
+		<dateFormat>dd-mm-yyyy</dateFormat>
+
+		<!-- global time format override -->   <!-- defaults to HH:mm:ss -->
+		<timeFormat>HH:mm:ss</timeFormat>
+
+		<scripts>
+      <![CDATA[
+        $(document).ready(function() {
+        
+		}
+      ]]>
+		</scripts>
+
+		<!-- custom styles -->
+		<styles>
+      <![CDATA[
+ 	
+      ]]>
+		</styles>
+	</configuration>
+</extentreports>
