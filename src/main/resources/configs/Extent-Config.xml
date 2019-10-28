@@ -1,41 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <extentreports>
 	<configuration>
-		<!-- Tema do relatório --> <!-- standard(Padrão), dark(Escuro) -->
+		<!-- report theme -->
+		<!-- standard, dark -->
 		<theme>dark</theme>
 
-		<!-- Encoding do documento -->
-		<encoding>ISO-8859-1</encoding>
+		<!-- document encoding -->
+		<!-- defaults to UTF-8 -->
+		<encoding>UTF-8</encoding>
 
-		<!-- Protocolo -->
+		<!-- offline report -->
+		<enableOfflineMode>false</enableOfflineMode>
+
+		<!-- enable or disable timeline on dashboard -->
+		<enableTimeline>true</enableTimeline>
+
+		<!-- protocol for script and stylesheets -->
+		<!-- defaults to https -->
 		<protocol>https</protocol>
 
-		<!-- Título do relatório -->
-		<documentTitle>Projeto POC</documentTitle>
+		<!-- title of the document -->
+		<documentTitle>Automation Report</documentTitle>
 
-		<!-- Nome do Relatório- isso será exibido na parte superior do relatório -->
-		<reportName>POC INICIAL</reportName>
+		<!-- report name - displayed at top-nav -->
+		<reportName>Automation Report</reportName>
 
-		<!-- Formato da data -->
-		<dateFormat>dd-mm-yyyy</dateFormat>
+		<!-- location of charts in the test view -->
+		<!-- top, bottom -->
+		<testViewChartLocation>bottom</testViewChartLocation>
 
-		<!-- global time format override -->   <!-- defaults to HH:mm:ss -->
-		<timeFormat>HH:mm:ss</timeFormat>
+		<!-- settings to enable/disable views -->
+		<!-- professional version only -->
+		<enableCategoryView>true</enableCategoryView>
+		<enableAuthorView>false</enableAuthorView>
+		<enableExceptionView>true</enableExceptionView>
+		<enableTestRunnerLogsView>true</enableTestRunnerLogsView>
 
+		<!-- custom javascript -->
 		<scripts>
-      <![CDATA[
-        $(document).ready(function() {
-        
-		}
-      ]]>
+            <![CDATA[
+                $(document).ready(function() {
+                    
+                });
+            ]]>
 		</scripts>
 
 		<!-- custom styles -->
 		<styles>
-      <![CDATA[
- 	
-      ]]>
+            <![CDATA[
+                $(document).ready(function() {
+                
+                $('.dashboard-view').click();
+                    
+                });
+            ]]>
 		</styles>
 	</configuration>
 </extentreports>

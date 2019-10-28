@@ -38,8 +38,6 @@
 		</dependency>
 
 
-
-
 		<dependency>
 			<groupId>com.relevantcodes</groupId>
 			<artifactId>extentreports</artifactId>

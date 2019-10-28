@@ -1,7 +1,5 @@
 package br.com.auto.test.capture_data_director;
 
-import java.io.File;
-
 import org.junit.AfterClass;
 import org.junit.runner.RunWith;
 
@@ -21,10 +19,11 @@ public class TestCaptureDataDirector {
 	public static void teardown() {
 		ConfigFileReader read = new ConfigFileReader("src\\main\\resources\\configs\\config.properties");
 		String browser = read.GetPropertyByKey("browserName");
-
-		Reporter.loadXMLConfig(new File("src/main/resources/configs Extent-Config.xml"));
+		
+		Reporter.loadXMLConfig("src/main/resources/configs/Extent-Config.xml");
+		
 		Reporter.setSystemInfo("Browser: ", browser);
-		Reporter.setSystemInfo("Usu·rio Maquina: ", System.getProperty("user.name"));
+		Reporter.setSystemInfo("Usu√°rio Maquina: ", System.getProperty("user.name"));
 		Reporter.setSystemInfo("Ambiente: ", "Testes");
 
 	}
