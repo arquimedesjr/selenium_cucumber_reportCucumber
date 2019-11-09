@@ -160,30 +160,30 @@ public class TestBase {
 		String dirReport = "";
 
 		try {
-			dir = new File(".\\src\\test\\resources\\Evidencia\\");
-			File imagem = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+			String imagem = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BASE64);
+			Reporter.addScreenCaptureFromPath("data:image/png;base64"+imagem);
 
-			if (dir.exists()) {
-				FileUtils.copyFile(imagem, new File(
-						dir.getAbsolutePath() + "//" + sdfTwo.format(data) + "//" + sdf.format(data) + ".png"));
-			} else {
-				dir.mkdir();
-				FileUtils.copyFile(imagem, new File(
-						dir.getAbsolutePath() + "//" + sdfTwo.format(data) + "//" + sdf.format(data) + ".png"));
-			}
-			
-			dirReport = dir.getAbsolutePath() + "//" + sdfTwo.format(data) + "//" + sdf.format(data) + ".png";
+//			if (dir.exists()) {
+//				FileUtils.copyFile(imagem, new File(
+//						dir.getAbsolutePath() + "//" + sdfTwo.format(data) + "//" + sdf.format(data) + ".png"));
+//			} else {
+//				dir.mkdir();
+//				FileUtils.copyFile(imagem, new File(
+//						dir.getAbsolutePath() + "//" + sdfTwo.format(data) + "//" + sdf.format(data) + ".png"));
+//			}
+//			
+//			dirReport = dir.getAbsolutePath() + "//" + sdfTwo.format(data) + "//" + sdf.format(data) + ".png";
 
 		} catch (IOException e) {
 			e.getStackTrace();
 
 		} finally {
 
-			try {
-				Reporter.addScreenCaptureFromPath(dirReport);
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
+//			try {
+//				Reporter.addScreenCaptureFromPath(dirReport);
+//			} catch (IOException e) {
+//				e.printStackTrace();
+//			}
 
 		}
 	}
